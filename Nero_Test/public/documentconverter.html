@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConvertAPI - Conversión de Documentos</title>
+    <link rel="stylesheet" type="text/css" href="styles/header.css"> <!-- Asegúrate de que esta ruta sea correcta -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <header class="mi-encabezado">
+        <h1>Mi Sitio Web</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container mt-5">
+        <h2>Conversión de Documentos con ConvertAPI</h2>
+        <form id="convertForm" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="fileInput">Seleccione un archivo</label>
+                <input type="file" class="form-control-file" id="fileInput" accept=".pdf, .docx, .pptx, .xlsx">
+            </div>
+            <button type="button" class="btn btn-primary" id="convertButton">Convertir</button>
+        </form>
+        <div class="mt-3" id="outputArea"></div>
+    </div>
+
+    <script>
+        const convertButton = document.getElementById("convertButton");
+        const fileInput = document.getElementById("fileInput");
+        const outputArea = document.getElementById("outputArea");
+
+        convertButton.addEventListener("click", () => {
+            const formData = new FormData();
+            formData.append("file", fileInput.files[0]);
+
+            fetch("URL_DE_TU_SERVIDOR", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                outputArea.innerHTML = `<p>Archivo convertido disponible para descargar: <a href="${data.File.Url}" target="_blank">${data.File.FileName}</a></p>`;
+            })
+            .catch(error => {
+                console.error("Error de red:", error);
+                outputArea.innerHTML = `<p>Error al realizar la conversión.</p>`;
+            });
+        });
+    </script>
+</body>
+</html>

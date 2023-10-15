@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,900;1,100;1,200;1,300;1,400;1,500;1,900&family=Oxygen&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,300&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Oxygen", sans-serif;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+.navbar-brand{
+    margin: 1em;
+    font-size: 40px;
+    color: rgba(22,0,84,255); /* Cambia el color de los enlaces visitados a morado */
+}
+.navbar-brand img{
+  height: 150px;
+}
+
+.navbar-toggler{
+    border: 0;
+    margin-right: 5em;
+}
+
+.navbar-toggler-icon{
+    color: red !important;
+}
+  
+  .box {
+    position: relative;
+    width: 50%;
+    height: 50%;
+   
+  }
+
+
+.opcions{
+    margin-left: auto;
+}
+
+.opcions a{
+    font-size: 20px;
+    margin-right: 5em;
+    color: rgba(22,0,84,255); /* Cambia el color de los enlaces visitados a morado */
+}
+
+/*--------------------------------------------------------------------------------------------------------------*/
+
+.navbar-toggler-icon {
+    width: 30px;
+    height: 20px; /* Tamaño de las líneas */
+    background-color: #ffffff00; /* Color de las líneas */
+    display: block !important;
+    color: #ff0000;
+    transition: background-color 0.3s; /* Transición de color */
+  }
+  
+  /* Cambio de color al pasar el mouse (ejemplo) */
+  .navbar-toggler:hover .navbar-toggler-icon {
+    background-color: #007bff; /* Nuevo color al pasar el mouse */
+  }
+  
+  /* Cambio de color al hacer clic (ejemplo) */
+  .navbar-toggler:focus .navbar-toggler-icon {
+    background-color: #ff0000; /* Nuevo color al hacer clic */
+  }
+
+  h1{
+    margin: 10px;
+    margin-left: 40px;
+    font-weight: bold;
+    color: rgba(22,0,84,255);
+  }
+
+  .join{
+    margin: 10px;
+    margin-left: 40px;
+    color: rgba(22,0,84,255);
+    border-radius: 30px ;
+    border: 4px solid rgba(22,0,84,255);
+    padding: 10px 60px;
+    font-weight: bold;
+}
+
+.content-box{
+    background-image: radial-gradient(at 70%  center, rgb(194, 255, 226) 5% , rgb(255, 255, 255),rgb(255, 255, 255),rgb(255, 255, 255));
+    height: 80vh;
+}
+
+.content-box-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Ajusta la altura según tus necesidades */
+}
+
+.table {
+  display: table;
+  width: calc(100% - 240px); /* Ancho del 100% menos 40px (20px a la izquierda y 20px a la derecha) */
+  margin: 0 auto; /* Centra horizontalmente la tabla dentro del contenedor */
+}
+
+.table-row {
+  display: table-row;
+}
+
+.table-cell {
+  display: table-cell;
+  vertical-align: middle; /* Centra verticalmente el contenido en cada celda */
+  text-align: center; /* Centra horizontalmente el contenido en cada celda */
+  border: 1px solid #ccc; /* Agrega bordes para separar las celdas (opcional) */
+  padding: 10px; /* Espacio alrededor del contenido (ajusta según tus necesidades) */
+}
+
+#title{
+  font-family: 'Montserrat', sans-serif;
+  color: #160054;
+}
+
+/* Estilo para el input de tipo archivo */
+/* Estilo para el label que actúa como botón de selección de archivo */
+.custom-file-label {
+  display: inline-block;
+  background-color: #007bff; /* Color de fondo del botón */
+  color: #fff; /* Color del texto del botón */
+  padding: 10px 20px; /* Espaciado interno del botón */
+  border: 1px solid #007bff; /* Borde del botón */
+  border-radius: 5px; /* Borde redondeado del botón */
+  cursor: pointer; /* Cambia el cursor al puntero cuando pasas sobre el botón */
+  margin-bottom: 20px;
+}
+
+/* Oculta el input de archivo nativo */
+
+.custom-file-label{
+  background-color: #5271FF !important; /* Cambia el color de fondo según tus preferencias */
+  color: black !important; /* Cambia el color del texto según tus preferencias */
+  padding: 10px 20px !important; /* Ajusta el espaciado alrededor del botón */
+  cursor: pointer !important; /* Cambia el cursor al pasar sobre el botón */}
+
+.hidden-input {
+  display: none;
+}
+
+
+/* Estilo para personalizar la apariencia del botón de selección de archivos */
+.hidden-input {
+  opacity: 0; /* Hace que el input sea invisible */
+  width: 0;
+  height: 0;
+  position: absolute;
+  font-size: 0; /* Hace que el texto sea invisible */
+}
+
+
+
+
+
+
+
+
+/* Estilo para el formulario de carga de imágenes */
+#upload-form {
+margin: auto;
+  width: 50%;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+
+#upload-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+
+#upload-form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+#upload-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#upload-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+#upload-button:hover {
+  background-color: #0056b3;
+}
+
+
+/**----------------------------------- Estilos del elemento select:---------------------------- */
+
+/* Estilos para el formulario */
+#upload-form {
+  background-color: #f2f2f2; /* Color de fondo del formulario */
+  padding: 20px; /* Espaciado interno del formulario */
+  border-radius: 5px; /* Bordes redondeados */
+  max-width: 400px; /* Ancho máximo del formulario */ 
+  margin: 0 auto; /* Centrar horizontalmente */
+}
+
+/* Estilos para el contenido del formulario */
+#upload-form-content {
+  margin-bottom: 20px; /* Espacio inferior entre elementos */
+}
+
+/* Estilos para las etiquetas */
+label {
+  font-weight: bold; /* Texto en negrita */
+  display: block; /* Mostrar en una línea separada */
+}
+
+/* Estilos para el select */
+#format {
+  text-align: center; /* Centra el texto horizontalmente */
+    margin: 0 auto; /* Centra el elemento en el contenedor */
+    display: block; /* Hace que el elemento sea un bloque, necesario para aplicar 'margin: 0 auto;' */
+    width: fit-content; /* Ajusta el ancho del elemento al contenido */
+}
+
+/* Estilos para el botón */
+#upload-button {
+  background-color: #007bff; /* Color de fondo del botón */
+  color: #fff; /* Color del texto del botón */
+  border: none; /* Sin borde */
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambio de cursor al pasar el ratón */
+}
+
+/* Estilo para el botón cuando está deshabilitado */
+#upload-button:disabled {
+  background-color: #ccc; /* Color de fondo deshabilitado */
+  cursor: not-allowed; /* Cursor no permitido */
+}

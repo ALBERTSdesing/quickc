@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,300&display=swap');
+
+.coming-soon{
+    height: 500px;
+}
+
+.coming-content{
+    border: 3px solid #000;
+    border-radius: 20px;
+   
+    height: 150px;
+}
+
+.table {
+    border: 3px solid #000;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual ancho */
+    grid-gap: 10px; /* Espacio entre las celdas */
+    width: 1275px; /* Ancho total de la tabla */
+    margin: 20px 50px;
+  }
+  
+  .cell {               
+    /*border: 1px solid #000; /* Borde para cada celda (opcional) */
+    padding: 10px; /* Espaciado interno de las celdas (opcional) */
+    text-align: center; /* Centrar el texto en las celdas (opcional) */
+    width: 400px;
+  }
+  
+  .cell_void{
+    /*border: 1px solid #000; /* Borde para cada celda (opcional) */
+    padding: 10px; /* Espaciado interno de las celdas (opcional) */
+    width: 420px;
+    text-align: center; /* Centrar el texto en las celdas (opcional) */
+  }

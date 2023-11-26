@@ -1,67 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,300&display=swap');
 
-/*----------------Label-input "Elija un archivo"-----------*/
-.custom-file-label {
-  display: inline-block !important;
-  padding: 10px 20px !important; 
-  margin-left: auto !important;
-  margin-right: auto !important;    
-  cursor: pointer !important; 
-  margin-bottom: 20px !important;
-  width: 60% !important;
-  height: 80% !important;
-  background-color: transparent; /* Fondo transparente */
-    border: 2px solid #000; /* Bordes de 2 píxeles sólidos de color negro */
-    border-radius: 20px; /* Bordes redondos */
-    font-size: 16px; /* Tamaño del texto */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    outline: none; /* Quita el contorno predeterminado al hacer clic */
-}
-
-.custom-file-label2 {
-  display: inline-block !important;
-  padding: 10px 20px !important; 
-  margin-left: auto !important;
-  margin-right: auto !important;    
-  margin-bottom: 20px !important;
-  width: 90% !important;
-  height: 70% !important;
-  font-family: 'Montserrat';
-  display: block;
-  margin: auto auto ;
-  background-color: transparent; /* Fondo transparente */
-  border: 2px solid #000; /* Bordes de 2 píxeles sólidos de color negro */
-  border-radius: 20px; /* Bordes redondos */
-  font-size: 16px; /* Tamaño del texto */
-  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-  outline: none; /* Quita el contorno predeterminado al hacer clic */
-}
-.custom-file-label2:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
-}
-.custom-file-label2:hover {
-  background-color: #0056b3;
-}
-
-
-.label-select{
-  display: inline-block !important;
-  padding: 10px 20px !important; 
-  margin-left: auto !important;
-  margin-right: auto !important;    
-  margin-bottom: 20px !important;
-  width: 90% !important;
-  height: 70% !important;
-  font-family: 'Montserrat';
-  display: block;
-  margin: auto auto ;
-  background-color: transparent; /* Fondo transparente */
-  border: 2px solid #000; /* Bordes de 2 píxeles sólidos de color negro */
-  border-radius: 20px; /* Bordes redondos */
-  font-size: 16px; /* Tamaño del texto */
-  outline: none; /* Quita el contorno predeterminado al hacer clic */
-}
 
 /*----------------------------Seleccion de formato----------------------- */
 #upload-form {
@@ -74,6 +12,7 @@
 #upload-form{
   border: 3px solid #000; /* Bordes de 2 píxeles sólidos de color negro */
   border-radius: 20px; /* Bordes redondos */
+   
   margin: 70px 70px;
 }
 
@@ -145,29 +84,35 @@
 }
 
 
-.hidden-input {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
+
+/*--------------------------------------------------------------------Main table--------------------------------------------------*/
+.table-main {
+  display: grid;
+  grid-template-rows: auto auto; /* Dos filas automáticas */
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas con el mismo ancho */
+  gap: 10px; /* Espacio entre celdas */
+  border-radius: 15px; /* Bordes redondos */
+  padding-top: 50px;
+  padding-bottom:  50px;
 }
 
-/* Estilos para la miniatura de la imagen */
-#image-preview {
-  max-width: 100px; /* Ancho máximo */
-  max-height: 100px; /* Alto máximo */
-  padding: auto  20px !important; 
-  margin-left: auto !important;
-  margin-right: auto !important; 
-  display: none; /* Ocultar la miniatura inicialmente */
+.celda-m {
+  padding: 10px;
+  text-align: center;
+  /** border: 2px solid #000; **/
+   
+}
+.celda-m2 {
+  padding: 15px;
+  text-align: center;
+  /** border: 2px solid #000; **/ 
+
+}
+.hiddenn {
+  display: none;
 }
 
-#file-name {
-  font-size: 16px;
-  padding: 10%;
-}
-
+/*-----------------------------------------------------------------------------------------------------*/
 
 .contenedor {
   width: 100%;
@@ -193,7 +138,7 @@
   display: none;
   justify-content: center; /* Centrar verticalmente */
   align-items: center; /* Centrar horizontalmente (opcional) */
-
+  
 }
 
 .contenedor2 {
@@ -201,7 +146,7 @@
   margin: 0 auto; /* Para centrar el div horizontalmente */
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
- 
+
 }
 
 .tabla2 {
@@ -217,36 +162,103 @@
   text-align: center;
   height: 100%; /* Asegura que todas las celdas tengan la misma altura */
   display: none;
-}
-
-/*--------------------------------------------------------------------Main table--------------------------------------------------*/
-.table-main {
-  display: grid;
-  grid-template-rows: auto auto; /* Dos filas automáticas */
-  grid-template-columns: repeat(3, 1fr); /* Tres columnas con el mismo ancho */
-  gap: 10px; /* Espacio entre celdas */
-  border: 2px solid #000; /* Bordes de 2 píxeles sólidos de color negro */
-  border-radius: 15px; /* Bordes redondos */
-
-}
-
-.celda-m {
-  padding: 10px;
-  text-align: center;
-   
-}
-.celda-m2 {
-  padding: 0 px;
-  text-align: center;
  
+}
+/*------------------------------------------------------------------------------------------------------------*/
 
+/*----------------Label-input "Elija un archivo"-----------*/
+.custom-file-label {
+  display: inline-block !important;
+  padding: 10px 20px !important; 
+  margin-left: auto !important;
+  margin-right: auto !important;    
+  cursor: pointer !important; 
+  margin-bottom: 20px !important;
+  width: 60% !important;
+  height: 80% !important;
+  background-color: transparent; /* Fondo transparente */
+    border: 2px solid #000; /* Bordes de 2 píxeles sólidos de color negro */
+    border-radius: 20px; /* Bordes redondos */
+    font-size: 16px; /* Tamaño del texto */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    outline: none; /* Quita el contorno predeterminado al hacer clic */
+}
+.custom-file-label:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.custom-file-label:hover {
+  background-color: #0056b3;
+  color: white;
 }
 
 
-.hiddenn {
-  display: none;
+.custom-file-label2 {
+  display: inline-block !important;
+  padding: 10px 20px !important; 
+  margin-left: auto !important;
+  margin-right: auto !important;    
+  margin-bottom: 20px !important;
+  width: 90% !important;
+  height: 70% !important;
+  font-family: 'Montserrat';
+  display: block;
+  margin: auto auto ;
+  background-color: transparent; /* Fondo transparente */
+  border: 2px solid #000; /* Bordes de 2 píxeles sólidos de color negro */
+  border-radius: 20px; /* Bordes redondos */
+  font-size: 16px; /* Tamaño del texto */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  outline: none; /* Quita el contorno predeterminado al hacer clic */
+}
+.custom-file-label2:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.custom-file-label2:hover {
+  background-color: #0056b3;
 }
 
 
+.label-select{
+  display: inline-block !important;
+  padding: 10px 20px !important; 
+  margin-left: auto !important;
+  margin-right: auto !important;    
+  margin-bottom: 20px !important;
+  width: 90% !important;
+  height: 70% !important;
+  font-family: 'Montserrat';
+  display: block;
+  margin: auto auto ;
+  background-color: transparent; /* Fondo transparente */
+  border: 2px solid #000; /* Bordes de 2 píxeles sólidos de color negro */
+  border-radius: 20px; /* Bordes redondos */
+  font-size: 16px; /* Tamaño del texto */
+  outline: none; /* Quita el contorno predeterminado al hacer clic */
+}
 
+
+.hidden-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+/* Estilos para la miniatura de la imagen */
+#image-preview {
+  max-width: 100px; /* Ancho máximo */
+  max-height: 100px; /* Alto máximo */
+  padding: auto  20px !important; 
+  margin-left: auto !important;
+  margin-right: auto !important; 
+  display: none; /* Ocultar la miniatura inicialmente */
+}
+
+#file-name {
+  font-size: 16px;
+  padding: 10%;
+}
 

@@ -16,6 +16,15 @@
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
     outline: none; /* Quita el contorno predeterminado al hacer clic */
 }
+.file-label:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.file-label:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
 
 .custom-file-label2 {
   display: inline-block !important;
@@ -182,8 +191,7 @@
   height: 100%; /* Asegura que todas las celdas tengan la misma altura */
   justify-content: center; /* Centrar verticalmente */
   align-items: center; /* Centrar horizontalmente (opcional) */
-  border: 2px solid #000; /* Bordes de 2 píxeles sólidos de color negro */
-  border-radius: 20px; /* Bordes redondos */
+ 
   
  
 }
@@ -219,19 +227,22 @@
   gap: 10px; /* Espacio entre celdas */
   border: 2px solid #000; /* Bordes de 2 píxeles sólidos de color negro */
   border-radius: 15px; /* Bordes redondos */
-
+  padding-top: 50px;
+  padding-bottom:  50px;
+ 
 }
 
 .celda-m {
   padding: 10px;
   text-align: center;
+  /* border: 2px solid #000;  */
 }
 
 
 .celda-m2 {
   padding: 0px;
   text-align: center;
-
+  /*border: 2px solid #000; */
 }
 
 

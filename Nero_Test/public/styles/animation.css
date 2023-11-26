@@ -5,42 +5,26 @@
   height: 100%;
   background-image: radial-gradient(circle, #19c3a38c, transparent, transparent, transparent, transparent),
                     radial-gradient(circle, #af19c38c, transparent, transparent, transparent, transparent);
-  background-position: 0 0, -100% 0; /* El primer gradiente está en su lugar y el segundo desplazado a la izquierda */
-  animation: moveBackground 50s linear infinite;
+  background-position: 0 0, -100% 0; 
+  animation: moveBackground 10s linear infinite;
   background-size: 200% 200%;
   z-index: -1;
 }
 
 @keyframes moveBackground {
-  0% {
-    background-position: 120% 150%, -220% 0;
+  0%, 100% {
+    background-position: right top, left top;
   }
 
-  14.28% {
-    background-position: 100% 80%, -200% 100%;
+  25% {
+    background-position: left top, right bottom;
   }
 
-  28.57% {
-    background-position: 80% 20%, -180% 0;
+  50% {
+    background-position: right bottom, left top;
   }
 
-  42.85% {
-    background-position: 60% 80%, -160% 100%;
-  }
-
-  57.14% {
-    background-position: 40% 20%, -140% 0;
-  }
-
-  71.42% {
-    background-position: 20% 80%, -120% 100%;
-  }
-
-  85.71% {
-    background-position: 0% 20%, -100% 0;
-  }
-
-  100% {
-    background-position: -20% -50%, -80% -80%;
+  75% {
+    background-position: left top, right top;
   }
 }

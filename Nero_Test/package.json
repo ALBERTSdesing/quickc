@@ -7,7 +7,7 @@
     "start": "nodemon index.js",
     "dev": "nodemon src/index.js",
     "build": "npm install"
->>>>>>> 0d19502cc9d6bb4aeecb6429c2caa258d054dd45
+
   },
   "keywords": [],
   "author": "",

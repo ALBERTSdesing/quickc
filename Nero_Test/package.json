@@ -6,7 +6,11 @@
   "scripts": {
     "start": "nodemon index.js",
     "dev": "nodemon src/index.js",
+<<<<<<< HEAD
     "build": "npm install"
+=======
+    "build": "--production=false && npm run build && npm ci"
+>>>>>>> 883a54758bab1d5c6aa0bc2d8145bfdc7bb4e386
   },
   "keywords": [],
   "author": "",

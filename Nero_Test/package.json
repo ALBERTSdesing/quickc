@@ -1,17 +1,12 @@
 {
   "name": "videoconverter",
   "version": "1.0.0",
-  "description": "",
+  "description": " ",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
     "dev": "nodemon src/index.js",
-<<<<<<< HEAD
     "build": "npm install"
-=======
-    "build": "npm install "
-
->>>>>>> 1ab05c971e74aba36888c400bd40af72d431d323
   },
   "keywords": [],
   "author": "",

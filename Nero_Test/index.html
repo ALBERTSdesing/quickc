@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles.css">
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,900;1,100;1,200;1,300;1,400;1,500;1,900&family=Oxygen&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,900;1,100;1,200;1,300;1,400;1,500;1,900&family=Oxygen&display=swap');
 
 /**{
     box-sizing: border-box; 
@@ -23,70 +23,40 @@ html, body {
     margin: 0;
     padding: 0;
   }
-  .navbar-brand{  
-    margin: 1 em;
-      background-color: white;
-    font-size: 40px;
-    color: rgba(22,0,84,255); /* Cambia el color de los enlaces visitados a morado */
-}
+  header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 30px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-.navbar {
-  background-color: rgb(255, 255, 255);
-}
-.container-fluid{
-  background-color: white;
-}
-.navbar-brand img{
-  height: 130px;
-}
+        #logo img {
+            width: 50%;
+        }
 
-.navbar-toggler{
-    border: 0;
-    margin-right: 5em;
-}
+        nav {
+            display: flex;
+            align-items: center;
+        }
 
-.navbar-toggler-icon{
-    color: red !important;
-}
-  
-  .box {
-    width: 50%;
-    height: 20%;
-  }
+        nav a {
+            font-size: xx-large;
+            margin: 0 40px;
+            text-decoration: none;
+            color: #333; /* ajusta el color del texto según tu necesidad */
+            transition: color 0s ease; /* agrega una transición suave al color */
+        }
 
+        nav a:hover {
+            color: #007bff; /* cambia el color al hacer hover */
+        }
+        
 
-.opcions{
-    margin-left: auto;
-}
-
-.opcions a{
-    font-size: 20px;
-    margin-right: 5em;
-    color: rgba(22,0,84,255); /* Cambia el color de los enlaces visitados a morado */
-}
-
-/*--------------------------------------------------------------------------------------------------------------*/
-
-.navbar-toggler-icon {
-    width: 30px;
-    height: 20px; /* Tamaño de las líneas */
-    background-color: #ffffff00; /* Color de las líneas */
-    display: block !important;
-    color: #ff0000;
-    transition: background-color 0.3s; /* Transición de color */
-  }
-  
-  /* Cambio de color al pasar el mouse (ejemplo) */
-  .navbar-toggler:hover .navbar-toggler-icon {
-    background-color: #007bff; /* Nuevo color al pasar el mouse */
-  }
-  
-  /* Cambio de color al hacer clic (ejemplo) */
-  .navbar-toggler:focus .navbar-toggler-icon {
-    background-color: #ff0000; /* Nuevo color al hacer clic */
-  }
-
-  h1{
+        h1{
     margin: 10px;
     margin-left: 40px;
     font-weight: bold;
@@ -115,16 +85,13 @@ html, body {
   padding: 80px; /* Espaciado interno de las celdas (opcional) */
   height: 100%;
     /*border: 2px solid #000; /* Bordes de 2 píxeles sólidos de color negro */
-
 }
 .cell2 {
-  /*border: 1px solid #000; /* Borde para cada celda (opcional) */
   padding: 20px; /* Espaciado interno de las celdas (opcional) */
   text-align: center; /* Centrar el texto en las celdas (opcional) */
-    /*border: 2px solid #000; /* Bordes de 2 píxeles sólidos de color negro */
+
 }
 .cell_Center{
-  /*border: 1px solid #000; /* Borde para cada celda (opcional) */
   padding: 70px 150px; /* Espaciado interno de las celdas (opcional) */
   text-align: center; /* Centrar el texto en las celdas (opcional) */
 }
@@ -133,9 +100,376 @@ html, body {
 .title{
   font-size: 50px;
 }
+footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #aebaef36;
+            border-radius: 15px; /* Borde redondeado */;
+            /* Color de fondo del pie de página, ajusta según tus preferencias */
+            color: #30008a; /* Color del texto, ajusta según tus preferencias */
+
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer-left, .footer-right {
+            flex: 1;
+        }
+
+        .footer-left img {
+            width: 100%; /* El logo ocupa todo el ancho del bloque */
+            max-width: 150px; /* Tamaño máximo del logo */
+            display: block; /* Elimina el espacio adicional debajo de la imagen */
+            margin: 0 auto; /* Centra la imagen horizontalmente */
+        }
+
+h3{
+  font-weight: 600;
+  font-size: 25px;
+}
+.Logo_Img{
+  /*border: 1px solid #000;*/
+}
 
 
-  .background {
+@media screen and (max-width: 1200px) {
+  .cell_Center{
+  /*border: 1px solid #000; /* Borde para cada celda (opcional) */
+  padding: 70px 80px; /* Espaciado interno de las celdas (opcional) */
+  text-align: center; /* Centrar el texto en las celdas (opcional) */
+}
+}
+
+@media (max-width: 1000px) {
+            #logo img {
+            width: 40%;
+            }
+
+            .cell_Center{
+            padding: 70px 50px; /* Espaciado interno de las celdas (opcional) */
+            }
+            nav a {
+            font-size: large;
+        }
+    }
+        @media (max-width: 900px) {
+            #logo img {
+            width: 50%;
+            }
+            .cell_Center{
+            padding: 70px 5px; /* Espaciado interno de las celdas (opcional) */
+            }
+            .cell {
+              padding: 50px; /* Espaciado interno de las celdas (opcional) */
+              height: 100%;
+            }
+            nav a {
+                font-size: medium;
+            }
+            .table .title{
+              font-size: 40px;
+            }
+            #logo img {
+            width: 40%;
+            }
+
+            .join{
+              padding: 10px 50px;
+          }
+
+        }
+
+
+
+        @media (max-width: 800px) {
+            #logo img {
+            width: 55%;
+            }
+
+            nav a {
+            margin: 0 30px;
+            font-size: medium;
+            }
+            .cell_Center{
+            padding: 70px 5px; /* Espaciado interno de las celdas (opcional) */
+            }
+            .table .title{
+              font-size: 40px;
+            }
+            #logo img {
+            width: 40%;
+            }
+            .join{
+              padding: 10px 50px;
+          }
+
+        }
+
+        @media (max-width: 700px) {
+            #logo img {
+            width: 55%;
+            }
+            nav a {
+            margin: 0 20px;
+            }
+            .cell {
+              padding: 20px; /* Espaciado interno de las celdas (opcional) */
+              height: 100%;
+            }
+            .join{
+                margin: 10px;
+                margin-left: 40px;
+                padding: 10px 40px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            #logo img {
+            width: 55%;
+            }
+            nav a {
+            margin: 0 15px;
+            }
+            .cell {
+              height: 100%;
+            }
+         
+            .Nero_Img{
+              width: 200px;
+            }
+            
+        h1{
+          margin: 10px;
+          padding: 2%;
+        }
+            .join{
+                margin: 10px;
+                margin-left: 40px;
+                padding: 10px 25px;
+            }
+
+
+            footer {
+                flex-direction: column;
+            }
+
+            .footer-left, .footer-right {
+                order: initial; /* Restaura el orden predeterminado en pantallas pequeñas */
+                margin-top: 0; /* Restaura el espacio entre bloques */
+            }
+          }
+
+        @media (max-width: 550px) {
+            #logo img {
+            width: 60%;
+            }
+
+            nav a {
+            margin: 0 10px;
+            }
+        }
+        @media screen and (max-width: 500px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav {
+                margin-top: 10px;
+            }
+
+            nav a {
+                margin: 10px; /* Ajuste para mejorar la apariencia en pantallas pequeñas */
+            }
+
+            #logo {
+                order: -1;
+                text-align: center; /* Centrar el logo */
+                margin-bottom: 10px;
+            }
+
+            #logo img {
+                width: 40%; /* Ajuste del tamaño del logo para pantallas pequeñas */
+            }
+
+            .cell {
+              padding: 10px; /* Espaciado interno de las celdas (opcional) */
+              height: 100%;
+            }
+
+            .Nero_Img{
+              width: 150px;
+            }
+            h1{
+              margin: 0px;
+              padding: 0px;
+            }
+            .title{
+                font-size: 35px !important;
+              }
+            .join{
+                font-size: 15px !important;
+                margin: 10px;
+                margin-left: 40px;
+                padding: 10px 0px;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav {
+                margin-top: 10px;
+            }
+
+            nav a {
+                margin: 10px; /* Ajuste para mejorar la apariencia en pantallas pequeñas */
+            }
+
+            #logo {
+                order: -1;
+                text-align: center; /* Centrar el logo */
+                margin-bottom: 10px;
+            }
+
+            #logo img {
+                width: 40%; /* Ajuste del tamaño del logo para pantallas pequeñas */
+            }
+
+            .cell {
+              padding: 10px; /* Espaciado interno de las celdas (opcional) */
+              height: 100%;
+            }
+
+            .Nero_Img{
+              width: 150px;
+            }
+            h1{
+              margin: 0px;
+              padding: 0px;
+            }
+            .title{
+                font-size: 30px !important;
+              }
+            .join{
+                font-size: 15px !important;
+                margin: 1px;
+                margin-left: 1px;
+                padding: 5px 0px;
+            }
+        }
+        @media screen and (max-width: 350px) {
+          header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav {
+                margin-top: 10px;
+            }
+
+            nav a {
+                margin: 10px; /* Ajuste para mejorar la apariencia en pantallas pequeñas */
+            }
+
+            #logo {
+                order: -1;
+                text-align: center; /* Centrar el logo */
+                margin-bottom: 10px;
+            }
+
+            #logo img {
+                width: 40%; /* Ajuste del tamaño del logo para pantallas pequeñas */
+            }
+
+            .cell {
+              padding: 10px; /* Espaciado interno de las celdas (opcional) */
+              height: 100%;
+            }
+
+            .Nero_Img{
+              width: 100px;
+            }
+            h1{
+              margin: 0px;
+              padding: 0px;
+            }
+            .title{
+                font-size: 25px !important;
+              }
+            .join{
+              font-size: 10px;
+                font-size: 15px !important;
+                margin: 1px;
+                margin-left: 1px;
+                padding: 5px 0px;
+            }
+        }
+
+
+        @media screen and (max-width: 300px) {
+          header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav {
+                margin-top: 10px;
+            }
+
+            nav a {
+                margin: 10px; /* Ajuste para mejorar la apariencia en pantallas pequeñas */
+            }
+
+            #logo {
+                order: -1;
+                text-align: center; /* Centrar el logo */
+                margin-bottom: 10px;
+            }
+
+            #logo img {
+                width: 40%; /* Ajuste del tamaño del logo para pantallas pequeñas */
+            }
+
+            .cell {
+              padding: 10px; /* Espaciado interno de las celdas (opcional) */
+              height: 100%;
+            }
+
+            .cell_Center{
+            padding: 0px 0px; /* Espaciado interno de las celdas (opcional) */
+            
+            }
+
+            .Nero_Img{
+              width: 100px;
+            }
+            h4, h3  {
+              font-size: 15px;
+            }
+            h1{
+              margin: 0px;
+              padding: 0px;
+            }
+            .title{
+                font-size: 20px !important;
+              }
+            .join{
+                font-size: 10px !important;
+                margin: 1px;
+                margin-left: 1px;
+                padding: 5px 0px;
+            }
+        }
+
+
+
+        
+        .background {
   top: 0;
   left: 0;
   width: 100%;
@@ -184,76 +518,20 @@ html, body {
 
 
 
-.footer {
-    width: 100%; /* Ajusta el ancho al 100% del contenedor padre */
-    background-color: #aebaef36;
-    border-radius: 15px; /* Borde redondeado */;
-    /* Color de fondo del pie de página, ajusta según tus preferencias */
-    color: #30008a; /* Color del texto, ajusta según tus preferencias */
-    padding: 70px; /* Agrega espacio interno para el contenido del pie de página */
-}
-
-
-.footer_table {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual ancho */
-  
-  grid-gap: 10px; /* Espacio entre las celdas */
-  width: 300px; /* Ancho total de la tabla */
-}
-
-.footer_cell {
-  /*border: 1px solid #000; /* Borde para cada celda (opcional) */
-  padding: 10px; /* Espaciado interno de las celdas (opcional) */
-  text-align: center; /* Centrar el texto en las celdas (opcional) */
-  /*border: 2px solid #000; /* Bordes de 2 píxeles sólidos de color negro */
-
-}
-
-.footer_cell_void{
-  /*border: 1px solid #000; /* Borde para cada celda (opcional) */
-  padding: 10px; /* Espaciado interno de las celdas (opcional) */
-  width: 500px;
-  /*border: 2px solid #000; /* Bordes de 2 píxeles sólidos de color negro */
-
-}
-
-h3{
-  font-weight: 600;
-  font-size: 45px;
-}
-.Logo_Img{
-  /*border: 1px solid #000;*/
-}
-
-
-
     </style>
 </head>
 <body class="background">
-    <div class="box">
-        <nav class="navbar  fixed-top">
-            <div class="container-fluid">
-            <a class="navbar-brand" href="/index.html"><img src="NERO.png" alt=""></a>
-            <div class="opcions">
-                <ul class="nav justify-content-end">
-                    <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="http://localhost:4000/textconverter.html">Texto</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="/imagen">Imagen</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="/video">Video</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">NERO</a>
-                    </li>
-                </ul>
-            </div>
-            </div>
-        </nav>
+  <header>
+    <div id="logo">
+        <img src="NERO.png" alt="Logo">
     </div>
+    <nav>
+        <a href="#">Texto</a>
+        <a href="#">Imagen</a>
+        <a href="#">Video</a>
+        <a href="#">NERO</a>
+    </nav>
+</header>
     
     <div class="table">
       <div class="cell"> 
@@ -261,7 +539,7 @@ h3{
         <h1 class="title">cualquier</h1>
         <h1 class="title">archivo</h1>
       </div>
-      <div class="cell_Center"></div>
+      <div class="cell_Center" id="center2"></div>
       <div class="cell">
         <img src="https://media.discordapp.net/attachments/1126750343204704317/1165053374786445382/neritoo.png?ex=65457382&is=6532fe82&hm=3efbf28a5b2d863ad35ead422e29c6ae4813ad9ad5190e585f44b2e801f09dc0&=s" class="Nero_Img">
       </div>
@@ -272,24 +550,18 @@ h3{
       <div class="cell_Center"></div>
       <div class="cell2"></div>
     </div>        
-
-    <footer class="footer">
-      <div class="footer_table">
-        <div class="footer_cell">
-          <h3> QUICK </h3>
-          <h4> Quik@NeroSofware.com</h4>
-          <h4> NeroSofware.com</h4>
-          <h4>+55 55 5555 5555</h4>
-        </div>
-        <div class="footer_cell_void">
-
-        </div>
-        <div class="footer_cell">
-          <img src="https://media.discordapp.net/attachments/1126750343204704317/1165069521414004867/Logo_Img.png?ex=6545828b&is=65330d8b&hm=3dee194d8c6217f15ffec2f60c67045420cd2215b97da6b63d7481352909a1f6&=" class="Logo_Img">
-        </div>
-      </div>
+    <footer>
       
-    </footer>
+      <div class="footer-right">
+        <h3> QUICK </h3>
+        <h4> o.nero.dev@gmail.com</h4>
+        <h4>Nerodev.xyz</h4>
+        <h4>+55 55 5555 5555</h4>
+      </div>
+      <div class="footer-left">
+        <img src="./logo blanco 2.png" alt="Logo de la empresa" width="100">
+    </div>  
+  </footer>
    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>

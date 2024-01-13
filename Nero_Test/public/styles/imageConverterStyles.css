@@ -1,5 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,900;1,100;1,200;1,300;1,400;1,500;1,900&family=Oxygen&display=swap');
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+#logo img {
+  width: 50%;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  font-size: xx-large;
+  margin: 0 40px;
+  text-decoration: none;
+  color: #333; /* ajusta el color del texto según tu necesidad */
+  transition: color 0s ease; /* agrega una transición suave al color */
+}
+
+nav a:hover {
+  color: #007bff; /* cambia el color al hacer hover */
+}
 
 /*----------------------------Seleccion de formato----------------------- */
 #upload-form {
@@ -23,13 +55,14 @@
   margin-right: auto !important;    
   margin-bottom: 20px !important;
   width: 90% !important;
-  height: 70% !important;
+  height: 40% !important;
   font-family: 'Montserrat';
+  display: block;
   margin: auto auto ;
   background-color: transparent; /* Fondo transparente */
   border: 2px solid #000; /* Bordes de 2 píxeles sólidos de color negro */
   border-radius: 20px; /* Bordes redondos */
-  font-size: 16px; /* Tamaño del texto */
+  font-size: 14px; /* Tamaño del texto */
   cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
   outline: none; /* Quita el contorno predeterminado al hacer clic */
 }
@@ -99,13 +132,13 @@
 .celda-m {
   padding: 10px;
   text-align: center;
-  /** border: 2px solid #000; **/
    
 }
 .celda-m2 {
   padding: 15px;
   text-align: center;
   /** border: 2px solid #000; **/ 
+
 
 }
 .hiddenn {
@@ -138,7 +171,6 @@
   display: none;
   justify-content: center; /* Centrar verticalmente */
   align-items: center; /* Centrar horizontalmente (opcional) */
-  
 }
 
 .contenedor2 {
@@ -162,7 +194,6 @@
   text-align: center;
   height: 100%; /* Asegura que todas las celdas tengan la misma altura */
   display: none;
- 
 }
 /*------------------------------------------------------------------------------------------------------------*/
 
@@ -260,5 +291,205 @@
 #file-name {
   font-size: 16px;
   padding: 10%;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #aebaef36;
+  border-radius: 15px; /* Borde redondeado */;
+  /* Color de fondo del pie de página, ajusta según tus preferencias */
+  color: #30008a; /* Color del texto, ajusta según tus preferencias */
+
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-left, .footer-right {
+  flex: 1;
+}
+
+.footer-left img {
+  width: 100%; /* El logo ocupa todo el ancho del bloque */
+  max-width: 150px; /* Tamaño máximo del logo */
+  display: block; /* Elimina el espacio adicional debajo de la imagen */
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+h3{
+font-weight: 600;
+font-size: 25px;
+}
+.Logo_Img{
+/*border: 1px solid #000;*/
+}
+
+
+@media screen and (max-width: 800px ) {
+  #upload-button {
+    width: 80%;
+  }
+  .custom-file-label{
+    font-size: 14px;
+  }
+
+  .label-select{
+    font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 700px ) {
+  #upload-button {
+    width: 80%;
+    font-size: 12px;
+  }
+  .custom-file-label2{
+    font-size: 12px;
+  }
+  #file-name{
+    font-size: 12px;
+  }
+  #format {
+    font-size: 12px;
+  }
+
+  .label-select{
+    font-size: 12px;
+    }
+
+  .center-format{
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 600px){
+  #image-preview {
+    max-width: 70px; /* Ancho máximo */
+    max-height: 70px; /* Alto máximo */
+  }
+  #upload-button {
+    width: 100%;
+    font-size: 10px;
+  }
+  .custom-file-label2{
+  width: 60% !important;
+  height: 30% !important;
+    font-size: 10px;
+  }
+  #file-name{
+    font-size: 10px;
+  }
+  .label-select{
+    width: 60% !important;
+    height: 30% !important;
+    font-size: 10px;
+    }
+
+  #format {
+    width: 100% !important;
+    height: 40% !important; 
+    font-size: 10px;
+  }
+}
+
+
+@media screen and (max-width: 550px){
+  #upload-form{
+    margin: 70px 70px;
+  }
+  #format {
+    padding: 10px 20px !important; 
+    margin-left: auto !important;
+    margin-right: auto !important;    
+    margin-bottom: 20px !important;
+    width: 90% !important;
+    height: 40% !important;
+    margin: auto auto ;
+    font-size: 14px; /* Tamaño del texto */
+  }
+  .container-m{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+  }
+  #upload-button {
+    width: 60%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin: 5% auto ;
+    font-size: 16px; /* Tamaño del texto */
+  }  
+  .celda-m {
+    padding: 10px;
+  }
+  .celda-m2 {
+    padding: 15px;
+  }
+
+  .contenedor {
+    width: 100%;
+    margin: 0 auto; /* Para centrar el div horizontalmente */
+  }
+  
+  .celda {
+    padding: 20px;
+    height: 100%; /* Asegura que todas las celdas tengan la misma altura */
+  }
+  
+  .contenedor2 {
+    width: 100%;
+    margin: 0 auto; /* Para centrar el div horizontalmente */
+  }
+
+  .celda2 {
+    padding: 10px;
+    height: 100%; /* Asegura que todas las celdas tengan la misma altura */
+  }
+  .custom-file-label {
+    display: inline-block !important;
+    padding: 10px 20px !important; 
+    margin-left: auto !important;
+    margin-right: auto !important;    
+    margin-bottom: 20px !important;
+    width: 60% !important;
+    height: 80% !important;
+      border-radius: 20px; /* Bordes redondos */
+      font-size: 16px; /* Tamaño del texto */
+  }
+  .custom-file-label2 {
+    padding: 10px 20px !important; 
+    margin-left: auto !important;
+    margin-right: auto !important;    
+    margin-bottom: 20px !important;
+    width: 90% !important;
+    height: 40% !important;
+    margin: auto auto ;
+    font-size: 16px; /* Tamaño del texto */
+  }
+  .label-select{
+    padding: 10px 20px !important; 
+    margin-left: auto !important;
+    margin-right: auto !important;    
+    margin-bottom: 20px !important;
+    width: 90% !important;
+    height: 40% !important;
+    margin: auto auto ;
+    font-size: 16px; /* Tamaño del texto */
+  }
+
+  
+  /* Estilos para la miniatura de la imagen */
+  #image-preview {
+    max-width: 100px; /* Ancho máximo */
+    max-height: 100px; /* Alto máximo */
+    padding: auto  20px !important; 
+    margin-left: auto !important;
+    margin-right: auto !important; 
+  }
+  #file-name {
+    font-size: 16px;
+    padding: 10%;
+  }
 }
 

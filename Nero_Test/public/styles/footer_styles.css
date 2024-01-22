@@ -1,1 +1,39 @@
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #aebaef36;
+    border-radius: 15px; /* Borde redondeado */;
+    /* Color de fondo del pie de página, ajusta según tus preferencias */
+    color: #30008a; /* Color del texto, ajusta según tus preferencias */
+
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-left, .footer-right {
+    flex: 1;
+}
+
+.footer-left img {
+    width: 100%; /* El logo ocupa todo el ancho del bloque */
+    max-width: 150px; /* Tamaño máximo del logo */
+    display: block; /* Elimina el espacio adicional debajo de la imagen */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+h3{
+font-weight: 600;
+font-size: 25px;
+}
+
+          @media (max-width: 600px) {
+              footer {
+                  flex-direction: column;
+              }
+              .footer-left, .footer-right {
+                  order: initial; /* Restaura el orden predeterminado en pantallas pequeñas */
+                  margin-top: 0; /* Restaura el espacio entre bloques */
+              }
+            }
 

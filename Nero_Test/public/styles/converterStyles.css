@@ -1,1 +1,31 @@
+ header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 30px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
+        #logo img {
+            width: 50%;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            font-size: xx-large;
+            margin: 0 40px;
+            text-decoration: none;
+            color: #333; /* ajusta el color del texto según tu necesidad */
+            transition: color 0s ease; /* agrega una transición suave al color */
+        }
+
+        nav a:hover {
+            color: #007bff; /* cambia el color al hacer hover */
+        }
